@@ -32,8 +32,8 @@ Philip Lin: https://github.com/PhilipSJLin <br/>
 Andrei Tabatchouk: https://github.com/andrei-tabachk <br/>
 
 **Credits, Copyrights, Resources:** <br/>
-Giphy
-SlidesCarnival
-Google Slides
-Kaggle
+Giphy <br/>
+SlidesCarnival <br/>
+Google Slides <br/>
+Kaggle <br/>
 
