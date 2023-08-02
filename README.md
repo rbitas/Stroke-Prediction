@@ -37,3 +37,10 @@ SlidesCarnival <br/>
 Google Slides <br/>
 Kaggle <br/>
 
+**Note** <br/>
+These three websites were used to inform and help use Seaborn plots: <br/>
+https://seaborn.pydata.org/generated/seaborn.histplot.html <br/>
+https://medium.com/@szabo.bibor/how-to-create-a-seaborn-correlation-heatmap-in-python-834c0686b88e
+<br/>
+https://stackoverflow.com/questions/42406233/how-to-add-a-title-to-a-seaborn-boxplot <br/>
+
