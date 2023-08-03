@@ -9,6 +9,7 @@ In this project, we are utilizing Machine Learning to predict the likelihood of 
 ## **Data**
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
    * healthcare-dataset-stroke-data.csv <br/>
+   * https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/Dashboard1?publish=yes - Dashboards and additional views <br/>
 
 
 ## **How to Run**
