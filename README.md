@@ -22,7 +22,7 @@ In this project, we are utilizing Machine Learning to predict the likelihood of 
 Here is an interactive Dashboard for you to explore our data as well as additional perspectives you can use to see how we analyzed our information. <br/>
    * https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/Dashboard1?publish=yes<br/>
 
-## **Data** 
+## [**Data**](https://github.com/rbitas/Stroke-Prediction/blob/main/Data/healthcare-dataset-stroke-data.csv)
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
    * healthcare-dataset-stroke-data.csv <br/>
 
