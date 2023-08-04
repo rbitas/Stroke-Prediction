@@ -15,16 +15,19 @@ Machine Learning is the practice of applying algorithms and statistics to create
 * ML can help automate the data input side and provide accurate insight and prediction to inform important decision making. Some markets that may use this are health, finance, and marketing. <br/>
 
 ## **Introduction**<br/> 
-In this project, we are utilizing Machine Learning to predict the likelihood of someone having a stroke based on various health factors including hypertension, heart disease, average glucose level, and bmi and social factors including if married, type of area they live in, and type of work. Although we are not able to accurately present all the factors present in determining the exact percentage of likelihood of getting a stroke, we are able to say whether one is more likely or less likely to get a stroke.<br/>
+In this project, we are utilizing Machine Learning to predict the likelihood of someone having a stroke based on various health factors including hypertension, heart disease, average glucose level, and bmi and social factors including if married, type of area they live in, and type of work. Although we are not able to accurately present the exact percentage of likelihood of getting a stroke, we are able to say whether one is more likely or less likely to get a stroke given the data.<br/>
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3BuaTM0dmhxdjNzbXE2NmE5bm03aDgzdHhuemxvamdtcHJuZzUxbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iPj5oRtJzQGxwzuCKV/giphy.gif)
 
 ## **Dashboard** 
 Here is an interactive Dashboard for you to explore our data as well as additional perspectives you can use to see how we analyzed our information. <br/>
-   * https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/Dashboard1?publish=yes<br/>
+   * [Tableau Dashboard](https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/MalevFemaleDiseaseCountperType?publish=yes)<br/>
 
-## [**Data**](https://github.com/rbitas/Stroke-Prediction/blob/main/Data/healthcare-dataset-stroke-data.csv)
+## **Presentation**
+https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing
+
+## **Data**
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
-   * healthcare-dataset-stroke-data.csv <br/>
+   * [healthcare-dataset-stroke-data.csv](https://github.com/rbitas/Stroke-Prediction/blob/main/Data/healthcare-dataset-stroke-data.csv) <br/>
 
 ## **How to Run**
  <br/>
@@ -37,14 +40,12 @@ We were succesfully able to: <br/>
 ## **Technology/Tools used** :computer:
 * Programming Language: Python Pandas, Tableau <br/>
 * Packages imported: seaborn, matplotlib.pyplot, pandas, Tensorflow, Scikit-learn, imblearn <br/>
-   *From  Scikit-learn:
-      * sklearn.preprocessing: StandardScaler, OneHotEncoder, sklearn.model_selection: train_test_split
-      * sklearn.metrics: accuracy_score, confusion_matrix, classification_report
-      * sklearn.linear_model: LinearRegression, LogisticRegression
-      * sklearn.ensemble: RandomForestClassifier
+   *From  Scikit-learn: <br/>
+      * sklearn.preprocessing: StandardScaler, OneHotEncoder, sklearn.model_selection: train_test_split <br/>
+      * sklearn.metrics: accuracy_score, confusion_matrix, classification_report <br/>
+      * sklearn.linear_model: LinearRegression, LogisticRegression <br/>
+      * sklearn.ensemble: RandomForestClassifier <br/>
 
-## **Presentation**
-https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing
 
 ## **Team Members:** <br/>
 Rina Neaara Bitas: https://github.com/rbitas <br/>
@@ -53,10 +54,10 @@ Philip Lin: https://github.com/PhilipSJLin <br/>
 Andrei Tabatchouk: https://github.com/andrei-tabachk <br/>
 
 ## **Credits, Copyrights, Resources:** <br/>
-* Giphy <br/>
-* SlidesCarnival <br/>
-* Google Slides <br/>
-* Kaggle <br/>
+* [Giphy](https://giphy.com/) <br/>
+* [SlidesCarnival](https://www.slidescarnival.com/) <br/>
+* [Google Slides](https://www.google.com/slides/about/) <br/>
+* [Kaggle](https://www.kaggle.com/datasets) <br/>
 
 **Note** <br/>
 These three websites were used to inform and help use Seaborn plots: <br/>
