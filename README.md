@@ -15,7 +15,7 @@ Machine Learning is the practice of applying algorithms and statistics to create
 * ML can help automate the data input side and provide accurate insight and prediction to inform important decision making. Some markets that may use this are health, finance, and marketing. <br/>
 
 ## **Introduction**<br/> 
-In this project, we are utilizing Machine Learning to predict the likelihood of someone having a stroke based on various health factors including hypertension, heart disease, average glucose level, and bmi and social factors including if married, type of area they live in, and type of work.<br/>
+In this project, we are utilizing Machine Learning to predict the likelihood of someone having a stroke based on various health factors including hypertension, heart disease, average glucose level, and bmi and social factors including if married, type of area they live in, and type of work. Although we are not able to accurately present all the factors present in determining the exact percentage of likelihood of getting a stroke, we are able to say whether one is more likely or less likely to get a stroke.<br/>
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3BuaTM0dmhxdjNzbXE2NmE5bm03aDgzdHhuemxvamdtcHJuZzUxbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iPj5oRtJzQGxwzuCKV/giphy.gif)
 
 ## **Dashboard** 
@@ -46,13 +46,13 @@ We were succesfully able to: <br/>
 ## **Presentation**
 https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing
 
-**Team Members:** <br/>
+## **Team Members:** <br/>
 Rina Neaara Bitas: https://github.com/rbitas <br/>
 Samuel Fish: https://github.com/samuelhfish <br/>
 Philip Lin: https://github.com/PhilipSJLin <br/>
 Andrei Tabatchouk: https://github.com/andrei-tabachk <br/>
 
-**Credits, Copyrights, Resources:** <br/>
+## **Credits, Copyrights, Resources:** <br/>
 * Giphy <br/>
 * SlidesCarnival <br/>
 * Google Slides <br/>
