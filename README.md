@@ -2,14 +2,13 @@
 Project 4(Final Project)
 Machine Learning is the practice of applying algorithms and statistics to create models to create models that can learn from data and then make decisions or predictions about future data.
 
-## **Introduction**<br/>
+## **Introduction**<br/> ![Introduction](https://img.shields.io/badge/Introduction-yellowgreen)
 In this project, we are utilizing Machine Learning to predict the likelihood of someone having a stroke based on various health factors including hypertension, heart disease, average glucose level, and bmi and social factors including if married, type of area they live in, and type of work.<br/>
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3BuaTM0dmhxdjNzbXE2NmE5bm03aDgzdHhuemxvamdtcHJuZzUxbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iPj5oRtJzQGxwzuCKV/giphy.gif)
 
 ## **Data**
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
    * healthcare-dataset-stroke-data.csv <br/>
-
 
 ## **How to Run**
  <br/>
