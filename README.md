@@ -3,7 +3,7 @@ Project 4(Final Project)
 Machine Learning is the practice of applying algorithms and statistics to create models to create models that can learn from data and then make decisions or predictions about future data. Many of today's leading companies, such as Facebook, Google and Uber, make machine learning a central part of their operations as it automates repetitive tasks, increases efficiency of processes, and mitigates human error which allows employees to focus on more critical or strategic decisions. <br/>
 
 ### Many organizations make use of Machine Learning (ML). Some examples include:
-1. Image Recognition   <br/>
+1. Image Recognition :camera:  <br/>
 * ML can be used to recognizes objects in an image such as faces, abnormalities in health and medicine, image recognition in shopping, and even security and safety. In all of these cases, ML's algorithm lets it's user focus on solving the critical problems at hand such as a farmer intervening when ML notices that a plant has a new disease or a doctor is able to work on finding a solution when an imageing machine notices an abnormality from a previous image. <br/>
 2. Predict Traffic Patterns    <br/>
 * ML can be used to help generate predictions regarding the fastest route to a destination. This is apparent in most GPS programs which take user information from multiple drivers to find the best route. <br/>
@@ -19,7 +19,8 @@ In this project, we are utilizing Machine Learning to predict the likelihood of 
 ![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3BuaTM0dmhxdjNzbXE2NmE5bm03aDgzdHhuemxvamdtcHJuZzUxbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iPj5oRtJzQGxwzuCKV/giphy.gif)
 
 ## **Dashboard**
-   * https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/Dashboard1?publish=yes - Dashboards and additional views <br/>
+Here is an interactive Dashboard for you to explore our data as well as additional perspectives you can use to see how we analyzed our information.. <br/>
+   * https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/Dashboard1?publish=yes<br/>
 
 ## **Data**
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
