@@ -20,7 +20,7 @@ In this project, we are utilizing Machine Learning to predict the likelihood of 
 
 ## **Dashboard** 
 Here is an interactive Dashboard for you to explore our data as well as additional perspectives you can use to see how we analyzed our information. <br/>
-   * [Tableau Dashboard](https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/MalevFemaleDiseaseCountperType?publish=yes)<br/>
+   * [Tableau Dashboard](https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/WorktypevSmokingStatusDashboard?publish=yes)<br/>
 
 ## **Presentation**
 Here is the presentation to be accompanied with this project for your viewing pleasure. <br/>
