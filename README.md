@@ -387,7 +387,7 @@ Loss: 0.43909767270088196, Accuracy: 0.7746478915214539
 ```
 
 
-NerualNetwork with Keras tuned hyperparameters
+NeuralNetwork with Keras tuned hyperparameters
 ```python
 # Define the deep learning model
 nn_model = tf.keras.models.Sequential()
