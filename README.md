@@ -27,7 +27,8 @@ Here is the presentation to be accompanied with this project for your viewing pl
    * [Google Slides Presentation](https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing)
 
 ## **Deployment**
-StrokePrediction.py is available for deployment. You may test trial this app through your Visual Studio Code terminal with python StrokePrediction.py.
+StrokePrediction.py is available for deployment. You may test trial this app through your VSCode terminal with <br/>
+   * python StrokePrediction.py.
 
 ## **Data** :woman_technologist:
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
@@ -442,6 +443,7 @@ We were succesfully able to: <br/>
 * Train our Machine Learning Model :page_with_curl: <br/> 
 * Create various user friendly visuals to support user analysis :chart_with_upwards_trend: <br/>
 * Create a Dashboard using Tableau :bar_chart: <br/>
+* Create a deployable app as a tangible example of our machine learning model being utilized :100: <br/>
 
 ## **Technology/Tools used** :computer:
 * Programming Language: Python Pandas, Tableau <br/>
