@@ -31,7 +31,7 @@ For our project, we have visualized data extracted from the following dataset av
    * [healthcare-dataset-stroke-data.csv](https://github.com/rbitas/Stroke-Prediction/blob/main/Data/healthcare-dataset-stroke-data.csv) <br/>
 
 ## **How to Run**
-**DATA PREPARATION:**
+**DATA PREPARATION**
 
 (full code and notebooks exist in "Machine_Learning_Exploration" folder)
 
