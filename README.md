@@ -166,7 +166,7 @@ print(classification_report(y_test, predictions))
 ```
 ```
 Confusion Matrix
-Predicted 0	Predicted 1
+   Predicted 0	Predicted 1
 Actual 0	924	292
 Actual 1	12	50
 Accuracy Score : 0.7621283255086072
@@ -192,7 +192,7 @@ rf_model = rf_model.fit(X_train_scaled, y_resampled)
 ```
 ```
 Confusion Matrix
-Predicted 0	Predicted 1
+   Predicted 0	Predicted 1
 Actual 0	1198	18
 Actual 1	58	4
 Accuracy Score : 0.9405320813771518
@@ -264,7 +264,7 @@ predictions = model.predict(X_test_scaled)
 ```
 ```
 Confusion Matrix
-Predicted 0	Predicted 1
+   Predicted 0	Predicted 1
 Actual 0	1172	44
 Actual 1	52	10
 Accuracy Score : 0.9248826291079812
@@ -415,7 +415,7 @@ y_pred = np.round(predictions[:,0])
 ```
 ```
 Confusion Matrix
-Predicted 0	Predicted 1
+   Predicted 0	Predicted 1
 Actual 0	1027	189
 Actual 1	38	24
 Accuracy Score : 0.8223787167449139
