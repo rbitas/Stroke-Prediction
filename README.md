@@ -167,18 +167,18 @@ print(classification_report(y_test, predictions))
 ```
 Confusion Matrix
    Predicted 0	Predicted 1
-Actual 0	924	292
-Actual 1	12	50
-Accuracy Score : 0.7621283255086072
+Actual 0	886	330
+Actual 1	13	49
+Accuracy Score : 0.7316118935837246
 Classification Report
               precision    recall  f1-score   support
 
-           0       0.99      0.76      0.86      1216
-           1       0.15      0.81      0.25        62
+           0       0.99      0.73      0.84      1216
+           1       0.13      0.79      0.22        62
 
-    accuracy                           0.76      1278
-   macro avg       0.57      0.78      0.55      1278
-weighted avg       0.95      0.76      0.83      1278
+    accuracy                           0.73      1278
+   macro avg       0.56      0.76      0.53      1278
+weighted avg       0.94      0.73      0.81      1278
 ```
 
 Random Forest
