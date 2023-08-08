@@ -33,6 +33,8 @@ For our project, we have visualized data extracted from the following dataset av
 ## **How to Run**
 DATA PREPARATION:
 
+(full code and notebooks exist in "MMachine_Learning_Exploration" folder)
+
 First we encoded our non-numeric variables.
 
 ```python
@@ -47,7 +49,7 @@ encode_df.columns = enc.get_feature_names_out(df_cat)
 encode_df.head()
 ```
 
-```
+```python
 # Merge one-hot encoded features and drop the originals
 df = df.merge(encode_df,left_index=True, right_index=True)
 df = df.drop(df_cat,1)
@@ -55,33 +57,36 @@ df.head()
 ```
 
 While we started with a very clean dataset overall, there were still things we needed to adjust including dropping the "id" column which is of no use to us and filling the null values in the bmi column.
-```
+```python
 df = df.drop(columns=['id'])
 ```
 
 For null bmi values we made the decision to take the mean of the other values and fill the nulls with a number. We decided to use the mean of the all the non-null values.
-```
+```python
 # Find the mean of the "bmi" column to use as replacement for null values.
 df["bmi"].mean()
 ```
-```
+```python
 # Replace null values
 df['bmi'] = df['bmi'].fillna(29.88)
 df.head()
 ```
-```
-v# Split training/test datasets
+```python
+# Split training/test datasets
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y)
 ```
 
 Now we are ready to split the "stroke" column off as our target or "y" variable and turn our remaining columns into our features or the "X" variables.
 
-```
+```python
 # Remove stroke dtarget from features data
 y = df.stroke.values
-X = df.drop(columns="stroke").values
-```
-```
+X = df.drop(columns="stroke")
+
+columns = X.columns
+
+X = X.values
+
 # Split training/test datasets
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y)
 ```
@@ -92,7 +97,7 @@ After preprocessing our data and testing it in a machine learning model, a 95% a
 ```python
 pip install -U imbalanced-learn
 ```
-```
+```python
 # Split training/test datasets
 X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y)
 from imblearn.over_sampling import RandomOverSampler
@@ -105,7 +110,7 @@ X_resampled, y_resampled = ros.fit_resample(X_train, y_train.ravel())
 
 Finally, we scaled our data, and then started testing different supervised machine learning and neural network models.
 
-```
+```python
 # Preprocess numerical data for neural network
 
 # Create a StandardScaler instances
@@ -119,28 +124,28 @@ X_train_scaled = X_scaler.transform(X_resampled)
 X_test_scaled = X_scaler.transform(X_test)
 ```
 Logistic Regression
-```
+```python
 X_train_scaled.shape
 ```
-```
+```python
 from sklearn.linear_model import LogisticRegression
 
 classifier = LogisticRegression(solver='lbfgs',
                                 max_iter=200)
 classifier
 ```
-```
+```python
 classifier.fit(X_train_scaled, y_resampled)
 ```
-```
+```python
 predictions = classifier.predict(X_test_scaled)
 results = pd.DataFrame({"Prediction": predictions, "Actual": y_test}).reset_index(drop=True)
 ```
-```
+```python
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
 ```
-```
+```python
 # Calculating the confusion matrix
 cm = confusion_matrix(y_test, predictions)
 cm_df = pd.DataFrame(
@@ -151,7 +156,7 @@ cm_df = pd.DataFrame(
 acc_score = accuracy_score(y_test, predictions)
 ```
 
-```
+```python
 # Displaying results
 print("Confusion Matrix")
 display(cm_df)
@@ -176,23 +181,253 @@ Classification Report
 weighted avg       0.95      0.76      0.83      1278
 ```
 
-Random Forest/ Feature Importance Image
+Random Forest
+```python
+# Create a random forest classifier
+rf_model = RandomForestClassifier(n_estimators=500)
+```
+```python
+# Fitting the model
+rf_model = rf_model.fit(X_train_scaled, y_resampled)
 ```
 ```
+Confusion Matrix
+Predicted 0	Predicted 1
+Actual 0	1198	18
+Actual 1	58	4
+Accuracy Score : 0.9405320813771518
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97      1216
+           1       0.18      0.06      0.10        62
+
+    accuracy                           0.94      1278
+   macro avg       0.57      0.52      0.53      1278
+weighted avg       0.92      0.94      0.93      1278
+```
+```python
+# Random Forests in sklearn will automatically calculate feature importance
+importances = rf_model.feature_importances_
+
+# We can sort the features by their importance
+sorted(zip(rf_model.feature_importances_, columns), reverse=True)
 ```
 ```
+[(0.3586269837202005, 'age'),
+ (0.19090176591868344, 'avg_glucose_level'),
+ (0.16707080498112015, 'bmi'),
+ (0.03171998311673814, 'ever_married_Yes'),
+ (0.029536213658467918, 'ever_married_No'),
+ (0.029188100907300233, 'hypertension'),
+ (0.019229224656013018, 'heart_disease'),
+ (0.018497447842601464, 'smoking_status_never smoked'),
+ (0.016788312234218505, 'work_type_Self-employed'),
+ (0.016074590019140224, 'smoking_status_formerly smoked'),
+ (0.016051747988863208, 'work_type_Private'),
+ (0.01413799690174771, 'Residence_type_Rural'),
+ (0.014061067324401759, 'Residence_type_Urban'),
+ (0.013851618220876286, 'gender_Female'),
+ (0.013713634394472358, 'gender_Male'),
+ (0.013308747976911962, 'smoking_status_smokes'),
+ (0.012785946787004303, 'smoking_status_Unknown'),
+ (0.012556788195042062, 'work_type_Govt_job'),
+ (0.011823320592265388, 'work_type_children'),
+ (7.454391473848977e-05, 'work_type_Never_worked'),
+ (1.1606491928524725e-06, 'gender_Other')]
+ ```
+ ```python
+importances_df = pd.DataFrame(sorted(zip(rf_model.feature_importances_, columns), reverse=True))
+importances_df.set_index(importances_df[1], inplace=True)
+importances_df.drop(columns=1, inplace=True)
+importances_df.rename(columns={0: 'Feature Importances'}, inplace=True)
+importances_sorted = importances_df.sort_values(by='Feature Importances')
+importances_sorted.plot(kind='barh', color='lightgreen', title= 'Features Importances', legend=False)
+```
+```
+FEATURE IMPORTANCE CHART
+```
+
+
 Decision Tree
+```python
+# Creating the decision tree classifier instance
+model = tree.DecisionTreeClassifier()
+```
+```python
+# Fitting the model
+model = model.fit(X_train_scaled, y_resampled)
+```
+```python
+# Making predictions using the testing data
+predictions = model.predict(X_test_scaled)
 ```
 ```
-```
+Confusion Matrix
+Predicted 0	Predicted 1
+Actual 0	1172	44
+Actual 1	52	10
+Accuracy Score : 0.9248826291079812
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.96      0.96      0.96      1216
+           1       0.19      0.16      0.17        62
+
+    accuracy                           0.92      1278
+   macro avg       0.57      0.56      0.57      1278
+weighted avg       0.92      0.92      0.92      1278
 ```
 KerasTuner
+```python
+# Create a method that creates a new Sequential model with hyperparameter options
+def create_model(hp):
+    nn_model = tf.keras.models.Sequential()
+
+    # Allow kerastuner to decide which activation function to use in hidden layers
+    activation = hp.Choice('activation',['relu','tanh'])
+
+    # Allow kerastuner to decide number of neurons in first layer
+    nn_model.add(tf.keras.layers.Dense(units=hp.Int('first_units',
+        min_value=1,
+        max_value=20,
+        step=5), activation=activation, input_dim=21))
+
+    # Allow kerastuner to decide number of hidden layers and neurons in hidden layers
+    for i in range(hp.Int('num_layers', 1, 2)):
+        nn_model.add(tf.keras.layers.Dense(units=hp.Int('units_' + str(i),
+            min_value=5,
+            max_value=20,
+            step=5),
+            activation=activation))
+
+    nn_model.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
+
+    # Compile the model
+    nn_model.compile(loss="binary_crossentropy", optimizer='adam', metrics=["accuracy"])
+
+    return nn_model
 ```
 ```
-NerualNetwork Keras Tuned
+pip install -q -U keras-tuner
+```
+```python
+# Import the kerastuner library
+import keras_tuner as kt
+
+tuner = kt.Hyperband(
+    create_model,
+    objective="val_accuracy",
+    max_epochs=10,
+    hyperband_iterations=2)
+```
+```python
+# Run the kerastuner search for best hyperparameters
+tuner.search(X_train_scaled,y_resampled,epochs=10,validation_data=(X_test_scaled,y_test))
 ```
 ```
+Trial 55 Complete [00h 00m 07s]
+val_accuracy: 0.7363067269325256
+
+Best val_accuracy So Far: 0.8122065663337708
+Total elapsed time: 00h 04m 32s
 ```
+```python
+# Get top 3 model hyperparameters and print the values
+top_hyper = tuner.get_best_hyperparameters(3)
+for param in top_hyper:
+    print(param.values)
+```
+```
+{'activation': 'tanh', 'first_units': 16, 'num_layers': 2, 'units_0': 15, 'units_1': 15, 'tuner/epochs': 10, 'tuner/initial_epoch': 4, 'tuner/bracket': 1, 'tuner/round': 1, 'tuner/trial_id': '0047'}
+{'activation': 'tanh', 'first_units': 16, 'num_layers': 1, 'units_0': 10, 'units_1': 15, 'tuner/epochs': 10, 'tuner/initial_epoch': 4, 'tuner/bracket': 1, 'tuner/round': 1, 'tuner/trial_id': '0043'}
+{'activation': 'tanh', 'first_units': 11, 'num_layers': 2, 'units_0': 10, 'units_1': 10, 'tuner/epochs': 10, 'tuner/initial_epoch': 4, 'tuner/bracket': 2, 'tuner/round': 2, 'tuner/trial_id': '0037'}
+```
+```python
+# Evaluate the top 3 models against the test dataset
+top_model = tuner.get_best_models(3)
+for model in top_model:
+    model_loss, model_accuracy = model.evaluate(X_test_scaled,y_test,verbose=2)
+    print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+```
+```
+40/40 - 0s - loss: 0.4106 - accuracy: 0.8122 - 281ms/epoch - 7ms/step
+Loss: 0.41061288118362427, Accuracy: 0.8122065663337708
+40/40 - 0s - loss: 0.4391 - accuracy: 0.7746 - 284ms/epoch - 7ms/step
+Loss: 0.43909767270088196, Accuracy: 0.7746478915214539
+40/40 - 0s - loss: 0.4566 - accuracy: 0.7645 - 292ms/epoch - 7ms/step
+Loss: 0.4565829038619995, Accuracy: 0.7644757628440857
+```
+```python
+# Get second best model hyperparameters
+second_hyper = tuner.get_best_hyperparameters(2)[1]
+second_hyper.values
+```
+```
+{'activation': 'tanh',
+ 'first_units': 16,
+ 'num_layers': 1,
+ 'units_0': 10,
+ 'units_1': 15,
+ 'tuner/epochs': 10,
+ 'tuner/initial_epoch': 4,
+ 'tuner/bracket': 1,
+ 'tuner/round': 1,
+ 'tuner/trial_id': '0043'}
+```
+```python
+# Compare the performance to the second-best model
+second_model = tuner.get_best_models(2)[1]
+model_loss, model_accuracy = second_model.evaluate(X_test_scaled,y_test,verbose=2)
+print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+```
+```
+40/40 - 0s - loss: 0.4391 - accuracy: 0.7746 - 324ms/epoch - 8ms/step
+Loss: 0.43909767270088196, Accuracy: 0.7746478915214539
+```
+
+
+NerualNetwork with Keras tuned hyperparameters
+```python
+# Define the deep learning model
+nn_model = tf.keras.models.Sequential()
+nn_model.add(tf.keras.layers.Dense(units=15, activation="tanh", input_dim=21))
+nn_model.add(tf.keras.layers.Dense(units=15, activation="tanh"))
+nn_model.add(tf.keras.layers.Dense(units=1, activation="sigmoid"))
+
+# Compile the Sequential model together and customize metrics
+nn_model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
+
+# Train the model
+fit_model = nn_model.fit(X_train_scaled, y_resampled, epochs=50)
+
+# Evaluate the model using the test data
+model_loss, model_accuracy = nn_model.evaluate(X_test_scaled,y_test,verbose=2)
+print(f"Loss: {model_loss}, Accuracy: {model_accuracy}")
+```
+```python
+predictions = nn_model.predict(X_test_scaled)
+```
+```python
+import numpy as np
+
+y_pred = np.round(predictions[:,0])
+```
+```
+Confusion Matrix
+Predicted 0	Predicted 1
+Actual 0	1027	189
+Actual 1	38	24
+Accuracy Score : 0.8223787167449139
+Classification Report
+              precision    recall  f1-score   support
+
+           0       0.96      0.84      0.90      1216
+           1       0.11      0.39      0.17        62
+
+    accuracy                           0.82      1278
+   macro avg       0.54      0.62      0.54      1278
+weighted avg       0.92      0.82      0.87      1278
 ```
 
 While all of these models have good accuracy scores a closer examination of the confusion matrix and classification reports reveals that some models were missing many strokes, and also correctly identifying very few. A broad conclusion is that this limited dataset would likely be hard to use for any useful machine learning predictions. The keras tuned neural network had the highest recall out of the models that also achieved higher accuracy scores. The logistic regression model had a much higher recall score than all of the other models at .79, meaning it did the best at not missing any strokes. However, it also had a very large number of incorrect stroke predictions.
