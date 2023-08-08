@@ -447,11 +447,11 @@ We were succesfully able to: <br/>
 
 ## **Technology/Tools used** :computer:
 * Programming Language: Python Pandas, Tableau <br/>
-* Packages imported: seaborn, matplotlib.pyplot, pandas, Tensorflow, Scikit-learn, imblearn <br/>
+* Packages imported: seaborn, matplotlib.pyplot, pandas, Tensorflow, Scikit-learn, imblearn, numpy, pathlib, keras_tuner <br/>
    *From  Scikit-learn: <br/>
       * sklearn.preprocessing: StandardScaler, OneHotEncoder, sklearn.model_selection: train_test_split <br/>
       * sklearn.metrics: accuracy_score, confusion_matrix, classification_report <br/>
-      * sklearn.linear_model: LinearRegression, LogisticRegression <br/>
+      * sklearn.linear_model: LinearRegression, LogisticRegression, Lasso, Ridge, BayesianRidge <br/>
       * sklearn.ensemble: RandomForestClassifier <br/>
 
 
