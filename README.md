@@ -244,9 +244,7 @@ importances_df.rename(columns={0: 'Feature Importances'}, inplace=True)
 importances_sorted = importances_df.sort_values(by='Feature Importances')
 importances_sorted.plot(kind='barh', color='lightgreen', title= 'Features Importances', legend=False)
 ```
-```
-FEATURE IMPORTANCE CHART
-```
+<img width="778" alt="Screenshot 2023-08-07 at 6 19 49 PM" src="https://github.com/rbitas/Stroke-Prediction/assets/125224990/880da716-0407-456a-8c32-c8cddb51c660">
 
 
 **Decision Tree**
