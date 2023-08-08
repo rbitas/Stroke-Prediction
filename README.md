@@ -23,8 +23,8 @@ Here is an interactive Dashboard for you to explore our data as well as addition
    * [Tableau Dashboard](https://public.tableau.com/app/profile/andrei.tabatchouk/viz/Project4ML/MalevFemaleDiseaseCountperType?publish=yes)<br/>
 
 ## **Presentation**
-Here is the presentation to be accompanied with this project for your viewing pleasure.
-   *[Google Slides Presentation](https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing)
+Here is the presentation to be accompanied with this project for your viewing pleasure. <br/>
+   * [Google Slides Presentation](https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing)
 
 ## **Deployment**
 StrokePrediction.py is available for deployment. You may test trial this app through your Visual Studio Code terminal with python StrokePrediction.py.
@@ -35,7 +35,7 @@ For our project, we have visualized data extracted from the following dataset av
 
 ## **How to Run**
 **DATA PREPARATION**
-<details><summary>Full Directions on how to prepare and run your data</summary>
+<details><summary>Full Directions and coding on how to prepare and run your data</summary>
 (full code and notebooks exist in "Machine_Learning_Exploration" folder)
 
 First we encoded our non-numeric variables.
