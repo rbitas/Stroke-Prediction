@@ -26,6 +26,9 @@ Here is an interactive Dashboard for you to explore our data as well as addition
 Here is the presentation to be accompanied with this project for your viewing pleasure.
    *[Google Slides Presentation](https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing)
 
+## **Deployment**
+App.py
+
 ## **Data** :woman_technologist:
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
    * [healthcare-dataset-stroke-data.csv](https://github.com/rbitas/Stroke-Prediction/blob/main/Data/healthcare-dataset-stroke-data.csv) <br/>
