@@ -33,7 +33,7 @@ For our project, we have visualized data extracted from the following dataset av
 ## **How to Run**
 DATA PREPARATION:
 
-(full code and notebooks exist in "MMachine_Learning_Exploration" folder)
+(full code and notebooks exist in "Machine_Learning_Exploration" folder)
 
 First we encoded our non-numeric variables.
 
