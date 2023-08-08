@@ -31,7 +31,7 @@ For our project, we have visualized data extracted from the following dataset av
    * [healthcare-dataset-stroke-data.csv](https://github.com/rbitas/Stroke-Prediction/blob/main/Data/healthcare-dataset-stroke-data.csv) <br/>
 
 ## **How to Run**
-DATA PREPARATION:
+**DATA PREPARATION:**
 
 (full code and notebooks exist in "Machine_Learning_Exploration" folder)
 
@@ -123,7 +123,7 @@ X_scaler = scaler.fit(X_train)
 X_train_scaled = X_scaler.transform(X_resampled)
 X_test_scaled = X_scaler.transform(X_test)
 ```
-Logistic Regression
+**Logistic Regression**
 ```python
 X_train_scaled.shape
 ```
@@ -181,7 +181,7 @@ Classification Report
 weighted avg       0.94      0.73      0.81      1278
 ```
 
-Random Forest
+**Random Forest**
 ```python
 # Create a random forest classifier
 rf_model = RandomForestClassifier(n_estimators=500)
@@ -249,7 +249,7 @@ FEATURE IMPORTANCE CHART
 ```
 
 
-Decision Tree
+**Decision Tree**
 ```python
 # Creating the decision tree classifier instance
 model = tree.DecisionTreeClassifier()
@@ -278,7 +278,7 @@ Classification Report
    macro avg       0.57      0.56      0.57      1278
 weighted avg       0.92      0.92      0.92      1278
 ```
-KerasTuner
+**KerasTuner**
 ```python
 # Create a method that creates a new Sequential model with hyperparameter options
 def create_model(hp):
@@ -387,7 +387,7 @@ Loss: 0.43909767270088196, Accuracy: 0.7746478915214539
 ```
 
 
-NeuralNetwork with Keras tuned hyperparameters
+**NeuralNetwork with Keras tuned hyperparameters**
 ```python
 # Define the deep learning model
 nn_model = tf.keras.models.Sequential()
