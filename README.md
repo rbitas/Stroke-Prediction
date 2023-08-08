@@ -27,7 +27,7 @@ Here is the presentation to be accompanied with this project for your viewing pl
    *[Google Slides Presentation](https://docs.google.com/presentation/d/1Y0AWo-qqOz6cqIyUKf_oMHhe51R879zPMlMUvZuqsuw/edit?usp=sharing)
 
 ## **Deployment**
-App.py
+StrokePrediction.py is available for deployment. You may test trial this app through your Visual Studio Code terminal with python StrokePrediction.py.
 
 ## **Data** :woman_technologist:
 For our project, we have visualized data extracted from the following dataset available in the Resources folder <br/>
