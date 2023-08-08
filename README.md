@@ -32,7 +32,7 @@ For our project, we have visualized data extracted from the following dataset av
 
 ## **How to Run**
 **DATA PREPARATION**
-
+<details><summary>Full Directions on how to prepare and run your data</summary>
 (full code and notebooks exist in "Machine_Learning_Exploration" folder)
 
 First we encoded our non-numeric variables.
@@ -432,6 +432,7 @@ While all of these models have good accuracy scores a closer examination of the 
 
 In a scenario where the goal is to correctly predict something, a higher precision score might be desirable. However, in this medical context, the goal would be to make sure the model is not incorrectly missing people who were at risk for a stroke, so our logistic regression model did the best for that goal. While not perfect, if the goal is to learn if someone * might * be at a higher risk for stroke based on certain indicators, this model could be useful. Similarly, we might investigate if we could get better results by tweaking parameters in the Decision Tree or Random Forest models.
 
+</details>
 
 ## **Outcome**
 We were succesfully able to: <br/>
